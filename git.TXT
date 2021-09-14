@@ -1,0 +1,279 @@
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial
+$ git init
+Initialized empty Git repository in C:/Users/user/OneDrive/Desktop/tutorial/.git/
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git add .
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   demo.TXT
+
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git commit -m "This is my first commit"
+[master (root-commit) 40b8244] This is my first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 demo.TXT
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git remote add origin https://github.com/GannaYashwanth/demo.git
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git push origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 241 bytes | 241.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/GannaYashwanth/demo.git
+ * [new branch]      master -> master
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   demo.TXT
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git diff
+diff --git a/demo.TXT b/demo.TXT
+index 86a6277..214d458 100644
+--- a/demo.TXT
++++ b/demo.TXT
+@@ -1 +1,3 @@
+ hello yashwanth
++
++THird line
+\ No newline at end of file
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git commit -am "second commit"
+[master b6ddfc2] second commit
+ 1 file changed, 2 insertions(+)
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 274 bytes | 274.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/GannaYashwanth/demo.git
+   40b8244..b6ddfc2  master -> master
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git space clone https://github.com/GannaYashwanth/ATM_GUI.git
+git: 'space' is not a git command. See 'git --help'.
+
+The most similar commands are
+        replace
+        stage
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git clone https://github.com/GannaYashwanth/ATM_GUI.git
+Cloning into 'ATM_GUI'...
+remote: Enumerating objects: 44, done.
+remote: Counting objects: 100% (44/44), done.
+remote: Compressing objects: 100% (39/39), done.
+remote: Total 44 (delta 6), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (44/44), 6.79 MiB | 1.53 MiB/s, done.
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ATM_GUI/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git add .
+warning: adding embedded git repository: ATM_GUI
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> ATM_GUI
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached ATM_GUI
+hint:
+hint: See "git help submodule" for more information.
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   ATM_GUI
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   ATM_GUI (untracked content)
+
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ cd ATM_GUI
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial/ATM_GUI (main)
+$ git add .
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial/ATM_GUI (main)
+$ git commit -m "clone repo"
+[main a388cd2] clone repo
+ 1 file changed, 1 insertion(+)
+ create mode 100644 git.TXT
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial/ATM_GUI (main)
+$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/GannaYashwanth/ATM_GUI.git'
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial/ATM_GUI (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 291 bytes | 145.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/GannaYashwanth/ATM_GUI.git
+   adf127a..a388cd2  main -> main
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial/ATM_GUI (main)
+$ cd..
+bash: cd..: command not found
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial/ATM_GUI (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial/ATM_GUI (main)
+$ cd ..
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   ATM_GUI
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ATM_GUI (new commits)
+
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git add .
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git commit -am "third commit"
+[master 5ba52d7] third commit
+ 1 file changed, 1 insertion(+)
+ create mode 160000 ATM_GUI
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git push origin master https://github.com/GannaYashwanth/demo.git
+fatal: invalid refspec 'https://github.com/GannaYashwanth/demo.git'
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git commit -m "third commit"
+On branch master
+nothing to commit, working tree clean
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git push origin master https://github.com/GannaYashwanth/demo.git
+fatal: invalid refspec 'https://github.com/GannaYashwanth/demo.git'
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git add .
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git commit -m "third commit"
+On branch master
+nothing to commit, working tree clean
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.TXT
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git add .
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test.TXT
+
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git commit -m "fourth commit"
+[master d917b2c] fourth commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.TXT
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git push origin master https://github.com/GannaYashwanth/demo.git
+fatal: invalid refspec 'https://github.com/GannaYashwanth/demo.git'
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git remote add origin https://github.com/GannaYashwanth/demo.git
+fatal: remote origin already exists.
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ git push origin master
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 491 bytes | 245.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/GannaYashwanth/demo.git
+   b6ddfc2..d917b2c  master -> master
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$ ^C
+
+user@LAPTOP-AS4DKTJ5 MINGW64 ~/OneDrive/Desktop/tutorial (master)
+$
